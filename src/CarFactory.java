@@ -3,14 +3,19 @@ import java.util.*;
 public class CarFactory {
 
     public static List<Car> getCarArray(int listSize) {
-        // final List<Car> carsOutput = List.of();
-        final List<Car> carsArrayOutput = new ArrayList<>(listSize);
-        /*for(int i =0; i<listSize; i++){
-            carsArrayOutput.add();
+
+        List<Car> carsArrayOutput = new ArrayList<>();
+        for (int i = 0; i < listSize; i++) {
+            Car car = Car.builder()
+                    .setId(i)
+                    .setBrand(Brand.randomBrand())
+                    .setModel(Model.randomModel())
+                    .setColor(Color.randomColor())
+                    .setRegistrationNumber(31 * i)
+                    .setPrice(15000 + new Random().nextInt(10))
+                    .build();
+            carsArrayOutput.add(car);
         }
-
-         */
-
 
         return carsArrayOutput;
     }

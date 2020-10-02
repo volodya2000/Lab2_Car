@@ -91,7 +91,7 @@ public class Car {
                 ", color=" + color +
                 ", price=" + price +
                 ", registrationNumber=" + registrationNumber +
-                '}';
+                "}\n";
     }
 
     public class CarBuilder{
